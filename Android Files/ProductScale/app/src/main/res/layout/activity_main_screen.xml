@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/newBack"
+    tools:context="justintime.com.productscale.MainScreen">
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/errorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/error_text_color"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="@+id/loginBtn"
+        app:layout_constraintRight_toRightOf="@+id/loginBtn"
+        app:layout_constraintTop_toBottomOf="@+id/keeploggedInBox" />
+
+    <EditText
+        android:id="@+id/passwordText"
+        android:minWidth="250dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:ems="10"
+        android:background="@color/colorAccent"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@color/textColor"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="@+id/loginBtn"
+        app:layout_constraintRight_toRightOf="@+id/loginBtn"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/loginBtn" />
+
+    <EditText
+        android:id="@+id/emailText"
+        android:minWidth="250dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:ems="10"
+        android:background="@color/colorAccent"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@color/textColor"
+        android:hint="Email"
+        android:inputType="textWebEmailAddress"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="@+id/loginBtn"
+        app:layout_constraintRight_toRightOf="@+id/loginBtn"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/passwordText" />
+
+    <TextView
+        android:id="@+id/particleLoginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="monospace"
+        android:text="Particle.io"
+        android:textColor="@color/textColor"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/emailText"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <CheckBox
+        android:id="@+id/keeploggedInBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Keep Me Logged In"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
+
+    <ProgressBar
+        android:id="@+id/loginProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keeploggedInBox"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/colorAccent" />
+
+</android.support.constraint.ConstraintLayout>
